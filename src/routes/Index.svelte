@@ -16,7 +16,7 @@
 
 <section>
 	<div class="width-restriction" style="width: 70%">
-		<h1>Functional</h1>
+		<h1>Volunteer Certificates</h1>
 		<br/><br/>
 		{#await contributorsDB}
 				<p>Contributors loading...</p>
