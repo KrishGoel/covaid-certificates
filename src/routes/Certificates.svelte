@@ -4,9 +4,9 @@
     export let params
     let id = params.id
 
-    onMount(async () => {
-        window.print()
-    })
+    // onMount(async () => {
+    //     setTimeout(window.print(), 10000)
+    // })
 
     // Contributors
     let index
@@ -23,6 +23,10 @@
         }
         index = indices.indexOf(id)
     })
+    
+    function print() {
+        window.print()
+    }
 
 </script>
 
@@ -35,6 +39,9 @@
     @media print {
         @page { margin: 0; }
         body { margin: 1.6cm; }
+        #print-button {
+            display: none !important;
+        }
     }
 </style>
 
@@ -58,5 +65,10 @@
         <p>in recogition of their contributions to CovAID more bs</p>
         <br/>
         <p>This certificate can be digitally verified at <strong><a href="https://covaid-certificates.vercel.app" target="_blank">https://covaid-certificates.vercel.app</a></strong> using ID: {id}</p>
+
+        <br/><br/><br/>
+
+        <button id="print-button" on:click={print}>Print this certificate</button>
+
     </div>
 </section>

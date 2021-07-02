@@ -28,10 +28,10 @@
 					{#if i%3 == j}
 					<div class="card">
 						<div class="width-restriction">
-							<h3>{contributor.fields.name}</h3>
+							<h3 style="margin-bottom: 0">{contributor.fields.name}</h3>
 							<p>{contributor.fields.role}</p>
-							<p><strong>ID: </strong>{contributor.fields.id}</p>
-							<a href="/certificates/{contributor.fields.id}">View certificate</a>
+							<br/>
+							<a href="/certificates/{contributor.fields.id}">View certificate (<strong>ID: </strong>{contributor.fields.id})</a>
 						</div>
 					</div>
 					{/if}
