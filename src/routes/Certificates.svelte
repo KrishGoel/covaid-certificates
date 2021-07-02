@@ -4,10 +4,6 @@
     export let params
     let id = params.id
 
-    // onMount(async () => {
-    //     setTimeout(window.print(), 10000)
-    // })
-
     // Contributors
     let index
     var response
@@ -62,7 +58,7 @@
         <p><strong>{data[index].fields.role}</strong></p>
         {/await}
         <br/>
-        <p>in recogition of their contributions to CovAID more bs</p>
+        <p style="max-width: 500px; margin: 0 auto">in recognition of their outstanding contributions to CovAID: A student initiative to provide verified leads to COVID-19 Resources in real-time.</p>
         <br/>
         <p>This certificate can be digitally verified at <strong><a href="https://covaid-certificates.vercel.app" target="_blank">https://covaid-certificates.vercel.app</a></strong> using ID: {id}</p>
 
