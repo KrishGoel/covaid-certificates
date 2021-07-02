@@ -5,22 +5,20 @@
 	let page;
 	
 	import Index from './routes/Index.svelte'
-	import About from './routes/About.svelte'
-	import Volunteer from './routes/Volunteer.svelte'
+	import Certificates from './routes/Certificates.svelte'
 	
 	router('/', () => (page = Index))
-	router('/about', () => (page = About))
-	router('/volunteer', () => (page = Volunteer))
+	router('/certificates', () => (page = Certificates))
+
+	// Dynamic certificate routing
+	let params;
+	router('/certificates/:id', (ctx, next) => {
+		params = ctx.params
+		next()
+	},  () => page = Certificates)
 	
 	router.start()
 
-	import Nav from "../components/Nav.svelte"
-	import Footer from "../components/Footer.svelte"
-
 </script>
 
-<Nav/>
-
-<svelte:component this="{page}"/>
-
-<Footer/>
+<svelte:component this="{page}" params="{params}" />
