@@ -7,7 +7,7 @@
 
 	// Contributors
 	const contributorsDB = (async () => {
-		var response = await fetch('https://potion-api.now.sh/table?id=0fb220c98d614169923c9c44240c0327')
+		var response = await fetch('https://potion-api.now.sh/table?id=77f31dccce1143e197353657fd2d7fce')
 		return await response.json()
 	})()
 
@@ -30,6 +30,8 @@
 						<div class="width-restriction">
 							<h3>{contributor.fields.name}</h3>
 							<p>{contributor.fields.role}</p>
+							<p><strong>ID: </strong>{contributor.fields.id}</p>
+							<a href="/certificates/{contributor.fields.id}">View certificate</a>
 						</div>
 					</div>
 					{/if}
